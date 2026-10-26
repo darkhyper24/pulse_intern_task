@@ -76,12 +76,12 @@ public class ConsoleMenu
     private void SearchBooks()
     {
         Console.WriteLine("Search by: 1) Title  2) Author");
-        int by = ReadInt("Choice: ");
+        int choice = ReadInt("Choice: ");
         string text = ReadText("Search text: ");
 
-        if (by == 1)
+        if (choice == 1)
             PrintBooks(_library.SearchByTitle(text));
-        else if (by == 2)
+        else if (choice == 2)
             PrintBooks(_library.SearchByAuthor(text));
         else
             Console.WriteLine("Invalid choice.");
